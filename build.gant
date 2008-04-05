@@ -1,0 +1,18 @@
+includeTargets << gant.targets.Clean
+cleanPattern << [ '**/*~' ,  '**/*.bak' ]
+cleanDirectory << 'build'
+
+target ( stuff : 'A target to do some stuff.' ) {
+  println ( 'Stuff' )
+  depends ( clean )
+  echo ( message : 'A default message from Ant.' )
+  otherStuff ( )
+}
+
+target ( otherStuff : 'A target to do some other stuff' ) {
+  println ( 'OtherStuff' )
+  echo ( message : 'Another message from Ant.' )
+  clean ( )
+}
+
+setDefaultTarget ( stuff )
