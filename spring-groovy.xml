@@ -7,7 +7,7 @@
 	default-lazy-init="false">
 
 	<!-- This might be a piece of frequently-changing business logic,
-	     or a stub implementation of a layer of teh application for integration-testing -->
+	     or a stub implementation of a layer of the application for integration-testing -->
 	<lang:groovy id="groovyBean">
 		<lang:inline-script><![CDATA[
 		    package groovy.demo.spring
