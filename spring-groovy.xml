@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd"
+	default-lazy-init="false">
+
+	<!-- This might be a piece of frequently-changing business logic,
+	     or a stub implementation of a layer of teh application for integration-testing -->
+	<lang:groovy id="groovyBean">
+		<lang:inline-script><![CDATA[
+		    package groovy.demo.spring
+		    class GroovyAdder implements ComplicatedBusinessInterface {
+		        int add(int a, int b) {a+b}
+		    }
+		]]></lang:inline-script>
+	</lang:groovy>
+
+</beans>
