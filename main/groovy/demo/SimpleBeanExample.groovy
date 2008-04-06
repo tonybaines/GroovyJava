@@ -1,8 +1,7 @@
 package groovy.demo
 
 public class SimpleGroovyBean {
-	def propertyA
-	def propertyB
+	def propertyA, propertyB
 }
 
 // First with the Groovy bean
