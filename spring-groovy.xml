@@ -10,11 +10,15 @@
 	     or a stub implementation of a layer of the application for integration-testing -->
 	<lang:groovy id="groovyBean">
 		<lang:inline-script><![CDATA[
-		    package groovy.demo.spring
+		    package groovy.demo
 		    class GroovyAdder implements ComplicatedBusinessInterface {
-		        int add(int a, int b) {a+b}
+		        int addUp(int a, int b) {a+b}
 		    }
 		]]></lang:inline-script>
 	</lang:groovy>
+
+	<bean id="client" class="groovy.demo.BusinessClient">
+		<constructor-arg index="0" ref="groovyBean"/>
+	</bean>
 
 </beans>
